@@ -1,0 +1,486 @@
+<html>
+    <header>
+    <link>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./calculator.css"></link>    
+    </header>
+    <body>
+        <div class="outcal">
+            <div class="incal box shadow">
+                <div class="input">
+                    <input style="caret-color:transparent" class="cinput cinleft" type="number" onchange="input1()" onclick="i1()" id="display1" />
+                    <input style="caret-color:transparent" class="cinput" type="text" onchange="input3()" onclick="i3()" oninput="validateInput()" id="display3" />
+                    <input style="caret-color:transparent" class="cinput cinright" type="number" onchange="input2()" onclick="i2()" id="display2" />
+                </div>
+                
+                <button class="cbutton op" onclick="Add()" >+</button>
+                <button class="cbutton op" onclick="SUB()" >-</button>
+                <button class="cbutton op" onclick="MULTIPLY()" >*</button>
+                <button class="cbutton op" onclick="EXPONENT()" >**</button>
+                <button class="cbutton op" onclick="MOD()" >%</button>
+                <button class="cbutton op" onclick="DIVIDE()" >/</button>
+                <button class="cbutton" onclick="FOR0()" >0</button>
+                <button class="cbutton" onclick="FOR1()"> 1</button>
+                <button class="cbutton" onclick="FOR2()"> 2</button>
+                <button class="cbutton" onclick="FOR3()"> 3</button>
+                <button class="cbutton" onclick="FOR4()"> 4</button>
+                <button class="cbutton" onclick="FOR5()"> 5</button>
+                <button class="cbutton" onclick="FOR6()"> 6</button>
+                <button class="cbutton" onclick="FOR7()"> 7</button>
+                <button class="cbutton" onclick="FOR8()"> 8</button>
+                <button class="cbutton" onclick="FOR9()"> 9</button>
+                <button class="cbutton eq" onclick="FORE()"> =</button>
+                <button class="cbutton clr" onclick="CLR()"> CLR</button>
+            </div> 
+        </div>
+        <script>
+            var a="",b="";
+            function CLR()
+            {
+                document.getElementById("display1").value="";
+                document.getElementById("display2").value="";
+                document.getElementById("display3").value="";
+            }   
+            function  FOR0(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"0");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"0");
+                }
+                    
+               
+            }
+            function  FOR1(){
+                
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"1");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"1");
+                }
+                
+            }
+            function  FOR2(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"2");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"2");
+                }
+            }
+            function  FOR3(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"3");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"3");
+                }
+            }
+            function  FOR4(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"4");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"4");
+                }
+            }
+            function  FOR5(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"5");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"5");
+                }
+            }
+            function  FOR6(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"6");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"6");
+                }
+            }
+            function  FOR7(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"7");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"7");
+                }
+            }
+            function  FOR8(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"8");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"8");
+                }
+            }
+            function  FOR9(){
+                if(document.getElementById("display3").value=="" || document.getElementById("display3").value==null|| document.getElementById("display3").value==undefined)
+                {
+                    var temp=document.getElementById("display1").value;
+                    console.log(temp);
+                    document.getElementById("display1").value=Number(temp+"9");
+                }
+                else
+                {
+                    var temp=document.getElementById("display2").value;
+                    console.log(temp);
+                    document.getElementById("display2").value=Number(temp+"9");
+                }
+            }
+
+            
+            function Add(){
+                if((document.getElementById("display1").value!==""||document.getElementById("display1").value!==null||document.getElementById("display1").value!==undefined)&&(document.getElementById("display2").value!==""||document.getElementById("display2").value!==null||document.getElementById("display2").value!==undefined))
+                {
+                    a=Number(document.getElementById("display1").value);
+                b=Number(document.getElementById("display2").value);
+                    if(document.getElementById("display3").value=="+"){
+                        document.getElementById("display1").value=(a+b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="-"){
+                        document.getElementById("display1").value=(a-b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="*"){
+                        document.getElementById("display1").value=(a*b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="**"){
+                        document.getElementById("display1").value=(a**b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="/"){
+                        document.getElementById("display1").value=(a/b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="%"){
+                        document.getElementById("display1").value=(a%b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                }
+                document.getElementById("display3").value="+";
+            }
+            function SUB(){
+                if((document.getElementById("display1").value!==""||document.getElementById("display1").value!==null||document.getElementById("display1").value!==undefined)&&(document.getElementById("display2").value!==""||document.getElementById("display2").value!==null||document.getElementById("display2").value!==undefined)) {
+                    a=Number(document.getElementById("display1").value);
+                b=Number(document.getElementById("display2").value);
+                    if(document.getElementById("display3").value=="+"){
+                        document.getElementById("display1").value=(a+b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="-"){
+                        document.getElementById("display1").value=(a-b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="*"){
+                        document.getElementById("display1").value=(a*b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="**"){
+                        document.getElementById("display1").value=(a**b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="/"){
+                        document.getElementById("display1").value=(a/b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="%"){
+                        document.getElementById("display1").value=(a%b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                }
+                document.getElementById("display3").value="-";
+            }
+            function MULTIPLY(){
+                if((document.getElementById("display1").value!==""||document.getElementById("display1").value!==null||document.getElementById("display1").value!==undefined)&&(document.getElementById("display2").value!==""||document.getElementById("display2").value!==null||document.getElementById("display2").value!==undefined)){
+                    a=Number(document.getElementById("display1").value);
+                b=Number(document.getElementById("display2").value);
+                    if(document.getElementById("display3").value=="+"){
+                        document.getElementById("display1").value=(a+b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="-"){
+                        document.getElementById("display1").value=(a-b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="*"){
+                        document.getElementById("display1").value=(a*b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="**"){
+                        document.getElementById("display1").value=(a**b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="/"){
+                        document.getElementById("display1").value=(a/b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="%"){
+                        document.getElementById("display1").value=(a%b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                }
+                document.getElementById("display3").value="*";
+            }
+            function EXPONENT(){
+                if((document.getElementById("display1").value!==""||document.getElementById("display1").value!==null||document.getElementById("display1").value!==undefined)&&(document.getElementById("display2").value!==""||document.getElementById("display2").value!==null||document.getElementById("display2").value!==undefined)){
+                    a=Number(document.getElementById("display1").value);
+                b=Number(document.getElementById("display2").value);
+                    if(document.getElementById("display3").value=="+"){
+                        document.getElementById("display1").value=(a+b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="-"){
+                        document.getElementById("display1").value=(a-b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="*"){
+                        document.getElementById("display1").value=(a*b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="**"){
+                        document.getElementById("display1").value=(a**b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="/"){
+                        document.getElementById("display1").value=(a/b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="%"){
+                        document.getElementById("display1").value=(a%b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                }
+                document.getElementById("display3").value="**";
+            }
+            function DIVIDE(){
+                if((document.getElementById("display1").value!==""||document.getElementById("display1").value!==null||document.getElementById("display1").value!==undefined)&&(document.getElementById("display2").value!==""||document.getElementById("display2").value!==null||document.getElementById("display2").value!==undefined)){
+                    a=Number(document.getElementById("display1").value);
+                b=Number(document.getElementById("display2").value);
+                    if(document.getElementById("display3").value=="+"){
+                        document.getElementById("display1").value=(a+b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="-"){
+                        document.getElementById("display1").value=(a-b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="*"){
+                        document.getElementById("display1").value=(a*b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="**"){
+                        document.getElementById("display1").value=(a**b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="/"){
+                        document.getElementById("display1").value=(a/b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="%"){
+                        document.getElementById("display1").value=(a%b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                }
+                document.getElementById("display3").value="/";
+            }
+            function MOD(){
+                if((document.getElementById("display1").value!==""||document.getElementById("display1").value!==null||document.getElementById("display1").value!==undefined)&&(document.getElementById("display2").value!==""||document.getElementById("display2").value!==null||document.getElementById("display2").value!==undefined)) {
+                    a=Number(document.getElementById("display1").value);
+                b=Number(document.getElementById("display2").value);
+                    if(document.getElementById("display3").value=="+"){
+                        document.getElementById("display1").value=(a+b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="-"){
+                        document.getElementById("display1").value=(a-b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="*"){
+                        document.getElementById("display1").value=(a*b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="**"){
+                        document.getElementById("display1").value=(a**b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="/"){
+                        document.getElementById("display1").value=(a/b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                    else if(document.getElementById("display3").value=="%"){
+                        document.getElementById("display1").value=(a%b);
+                        document.getElementById("display2").value="";
+                        document.getElementById("display3").value="";
+                    }
+                }
+                document.getElementById("display3").value="%";
+            }
+            function FORE(){
+                a=Number(document.getElementById("display1").value);
+                b=Number(document.getElementById("display2").value);
+                if((document.getElementById("display2").value==""||document.getElementById("display2").value==null||document.getElementById("display2").value==undefined) && (document.getElementById("display3").value!==""&&document.getElementById("display3").value!==undefined&&document.getElementById("display3").value!==null))
+                {
+                    alert("NaN");
+                }
+                else if(document.getElementById("display3").value=="+"){
+                    document.getElementById("display1").value=(a+b);
+                    document.getElementById("display2").value="";
+                    document.getElementById("display3").value="";
+                }
+                else if(document.getElementById("display3").value=="-"){
+                    document.getElementById("display1").value=(a-b);
+                    document.getElementById("display2").value="";
+                    document.getElementById("display3").value="";
+                }
+                else if(document.getElementById("display3").value=="*"){
+                    document.getElementById("display1").value=(a*b);
+                    document.getElementById("display2").value="";
+                    document.getElementById("display3").value="";
+                }
+                else if(document.getElementById("display3").value=="**"){
+                    document.getElementById("display1").value=(a**b);
+                    document.getElementById("display2").value="";
+                    document.getElementById("display3").value="";
+                }
+                else if(document.getElementById("display3").value=="/"){
+                    document.getElementById("display1").value=(a/b);
+                    document.getElementById("display2").value="";
+                    document.getElementById("display3").value="";
+                }
+                else if(document.getElementById("display3").value=="%"){
+                    document.getElementById("display1").value=(a%b);
+                    document.getElementById("display2").value="";
+                    document.getElementById("display3").value="";
+                }
+                else if(document.getElementById("display1").value==""||document.getElementById("display1").value==undefined||document.getElementById("display1").value==null)
+                {
+                    document.getElementById("display1").value=0;
+                }
+                               
+                
+            }
+            function validateInput() {
+                const inputField = document.getElementById('display3');
+                const value = inputField.value;
+                const validOperators = ['+', '-', '**', '*', '/', '%'];
+                let operatorCount = 0;
+                let lastChar = '';
+
+                // Split the value by spaces and check each part for valid operators
+                const parts = value.split(/\s+/);
+
+                for (const part of parts) {
+                    if (validOperators.includes(part)) {
+                        operatorCount++;
+                    }
+                }
+
+                if (operatorCount > 1 || (parts.length === 1 && !validOperators.includes(value))) {
+                    alert('Only one arithmetic operation is allowed and it must be +, -, **, *, /, or %.');
+                    inputField.value = lastChar; // Revert to the last valid input
+                } else {
+                    lastChar = value; // Store the last valid input
+                }
+            }
+        </script>
+      
+ </body>
+
+
+ 
+</html>

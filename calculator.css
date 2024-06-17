@@ -1,0 +1,123 @@
+.outcal{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f1f5eb;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.incal{
+    display:flex;
+    flex-wrap:wrap;
+    width:40vw !important;
+    max-width: 40vw !important;
+    height: auto;
+    justify-content: center;
+
+    background-color: #2813c9;
+    background-image: url("https://www.transparenttextures.com/patterns/white-brushed.png");
+   
+    padding:5vh 0.5vw;
+    gap:0;
+    border-radius:20px !important;
+}
+.box {
+  
+    border: 2px solid rgb(212, 170, 15);
+    box-shadow: 0 0 5px 5px inset #f2f2f2;
+    position: relative;
+    z-index: 0;
+  }
+  .shadow:before {
+    content:"";
+    position: absolute;
+    inset: -5px;
+    transform: translate(10px,8px);
+    z-index: -2;
+    background: conic-gradient(from 90deg at 40% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #c71585, #cf1261, #d61039, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+    filter: blur(10px);
+  }
+  .shadow:after {
+    content:"";
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    background: inherit;
+    border: inherit;
+    box-shadow: inherit;
+    border-radius: 15px;
+  }
+.input{
+    width:60vw;
+    display: flex;
+    justify-content: center;
+  
+}
+.clr{
+    background-color: red !important;
+}
+.eq{
+    background-color: #0ab03c !important;
+    color: white;
+}
+.cinput{
+    width:32%;
+    padding:15px 10px 15px 10px;
+    margin:0;
+    font-size:16px;
+    border:none;
+}
+.cinleft{
+    border-radius:15px 0 0 15px;
+}
+.cinright{
+    border-radius:0 15px 15px 0;
+}
+.op{
+    background-color: rgb(7, 11, 127) !important;
+}
+.cbutton:hover{
+    transform: perspective(1px) scale(1.1);
+    background-color: rgb(7, 61, 198) !important;
+    color:#7fcafc !important;
+}
+.cbutton{
+    width:30%;
+    padding:10px;
+    margin: 10px;
+    
+    border-radius:15px;
+    border:1px solid #ccc;
+    font-size:16px;
+    background-color:#117dc5;
+    cursor:pointer;
+    color:white;
+}
+@media(max-width:750px){
+    .incal{
+        width:90vw !important;
+        max-width: 90vw !important;
+        align-items: center;
+        height: auto;
+        margin-bottom: 25vh;
+    }
+    .input{
+        width:85vw;
+    }
+    .cinput{
+        width:30vw !important;
+        padding: auto;
+        height: 5vh;
+    }
+    .cbutton{
+        height:5vh;
+        width:30%;
+
+    }
+    .cbutton{
+        font-size: 35px;
+    }
+}
